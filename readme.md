@@ -65,9 +65,6 @@ source venv/bin/activate
 
 
 
-sprt/hamburguer.png
-
-
 # 🎬 Tela Inicial 
 ![TELA INICIAL](/sprt/tela_inicial.png)
 
@@ -94,9 +91,8 @@ sprt/hamburguer.png
 - Lucas David Lima Ferreira ***ldlf***
 
 # Divisao de tarefas do grupo
--
--
--
--
--
--
+-visual - Carlos | Joyce
+-código - Efraim | João Gustavo 
+-organização geral - João Henrique | Lucas David
+-slides e relatório - João Henrique | Lucas David
+
