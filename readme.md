@@ -45,7 +45,7 @@ git clone https://github.com/carlosvinicius-ux/Projeto_Final_IP.git
 ```
 3. Execute:
 ```
-python jogo.py
+python jogo-final.py
 ```
 
 # Criaçao do ambiente virtual (recomendavel):
