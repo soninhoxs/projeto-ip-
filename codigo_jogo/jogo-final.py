@@ -4,7 +4,7 @@ import random
 DEBUG_MODE = False  # hitboxes
 
 # CONSTANTES
-WIDTH, HEIGHT = 1400, 1000
+WIDTH, HEIGHT = 1400, 900
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (200, 0, 0)
@@ -43,6 +43,9 @@ class Player:
         # Variáveis para lentidão
         self.slowed_timer = 0
         self.SLOWED_DURATION = 300  # 5 segundos
+        
+        # Variáveis para o contador de hotdogs
+        self.hotdogs_eaten = 0 
 
     def update(self, keys):
         # Lógica para o timer de lentidão
@@ -214,22 +217,24 @@ class Game:
 
             self.burger_size = 80
             self.bomb_size = 120
-            self.hotdog_size = 80 
+            self.hotdog_size = 80
             
             self.burger_image = pygame.transform.scale(pygame.image.load("hamburguer.png").convert_alpha(), (self.burger_size, self.burger_size))
             self.bomb_image = pygame.transform.scale(pygame.image.load("bomba.png").convert_alpha(), (self.bomb_size, self.bomb_size))
             self.hotdog_image = pygame.transform.scale(pygame.image.load("cachorro_quente_mofado.png").convert_alpha(), (self.hotdog_size, self.hotdog_size))
             
-            loaded_donuts_image = pygame.image.load("donuits.png").convert_alpha()
-            self.donuts_image = pygame.transform.scale(loaded_donuts_image, (60, 60))
+            loaded_donuts_image = pygame.image.load("donut.png").convert_alpha()
+            self.donuts_image = pygame.transform.scale(loaded_donuts_image, (80, 80))
 
             self.heart_image = pygame.transform.scale(pygame.image.load("coracao.png").convert_alpha(), (80, 80))
             self.play_button_image = pygame.transform.scale(pygame.image.load("botao_play.png").convert_alpha(), (350, 400))
+            self.poison_hotdog_image = pygame.transform.scale(pygame.image.load("cachorro_quente_mofado.png").convert_alpha(), (80, 80)) 
 
             # FONTE
             self.font_fases = pygame.font.Font("Pixeled.ttf", 35)
             self.font_game_over = pygame.font.Font("Pixeled.ttf", 40)
             self.font_button = pygame.font.Font("Pixeled.ttf", 25)
+            self.font_timer = pygame.font.Font("Pixeled.ttf", 30) 
 
         except pygame.error as e:
             print(f"Erro ao carregar a imagem ou fonte: {e}")
@@ -245,6 +250,7 @@ class Game:
         self.player.y_velocity = 0
         self.lives = 3
         self.player.speed = self.player.base_speed # Garante que a velocidade do jogador é restaurada
+        self.player.hotdogs_eaten = 0 
 
     def spawn_item(self):
         size = 80 
@@ -361,6 +367,7 @@ class Game:
                     elif item.kind == "hotdog":  # Cachorro-quente mofado
                         self.player.speed = self.player.base_speed // 2  # Reduz a velocidade
                         self.player.slowed_timer = self.player.SLOWED_DURATION
+                        self.player.hotdogs_eaten += 1 
                         self.items.remove(item)
 
             if self.score >= self.WIN_SCORE_FASE_1:
@@ -480,6 +487,17 @@ class Game:
         self.screen.blit(self.restart_button_image, restart_rect)
         return restart_rect
 
+    def draw_hotdog_counter(self):
+        self.screen.blit(self.poison_hotdog_image, (10, 80)) 
+        self.draw_text(f"{self.player.hotdogs_eaten}", 10 + self.poison_hotdog_image.get_width() + 10,
+                       80 + self.poison_hotdog_image.get_height() // 2, color=WHITE, font_size=40, centered=True)
+
+    def draw_slow_timer(self):
+        if self.player.slowed_timer > 0:
+            remaining_time = self.player.slowed_timer / FPS # Converte frames para segundos
+            text = f"{remaining_time:.1f}s"
+            self.draw_text(text, WIDTH - 10, HEIGHT - 30, color=WHITE, font_size=30, centered=False)
+
     def draw(self):
         self.screen.fill(BLACK)
         if self.state == 'menu':
@@ -498,6 +516,10 @@ class Game:
                 self.screen.blit(self.burger_image, (10, 10))
                 self.draw_text(f"{self.score}", 10 + self.burger_image.get_width() + 10,
                                10 + self.burger_image.get_height() // 2, color=WHITE, font_size=40, centered=True)
+                
+                # Cachorro-quente como contador
+                self.draw_hotdog_counter()
+                
             elif self.state == 'fase_2_playing':
                 self.screen.blit(self.fase2_wallpaper, (0, 0))
                 # Imagem donut para o contador
@@ -516,6 +538,10 @@ class Game:
 
             self.player.draw(self.screen)
             self.draw_hearts()
+
+            # Time
+            self.draw_slow_timer()
+            
             for item in self.items:
                 item.draw(self.screen)
         elif self.state == 'game_over':
