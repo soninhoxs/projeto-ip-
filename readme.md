@@ -91,8 +91,8 @@ source venv/bin/activate
 - Lucas David Lima Ferreira ***ldlf***
 
 # Divisao de tarefas do grupo
--visual - Carlos | Joyce
--código - Efraim | João Gustavo 
--organização geral - João Henrique | Lucas David
--slides e relatório - João Henrique | Lucas David
+- visual: Carlos | Joyce
+- código: Efraim | Joao Gustavo 
+- organização geral: Joao Henrique | Lucas David
+- slides e relatório: Joao Henrique | Lucas David
 
