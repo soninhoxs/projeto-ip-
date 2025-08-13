@@ -65,25 +65,25 @@ source venv/bin/activate
 
 
 
-
+sprt/hamburguer.png
 
 
 # 🎬 Tela Inicial 
-![TELA INICIAL](/IP/tela_inicial.png)
+![TELA INICIAL](/sprt/tela_inicial.png)
 
 # 🌧️🍔 Instruçao 
-![TELA INICIAL](/IP/instrucoes.png)
+![TELA INICIAL](/sprt/instrucoes.png)
 
 # 🤖💥 Cenarios
-![TELA INICIAL](IP/tela_fase1.jpg)
-![TELA INICIAL](IP/tela_fase2.jpg)
-![TELA INICIAL](IP/escolhapersonagens.png)
+![TELA INICIAL](sprt/tela_fase1.jpg)
+![TELA INICIAL](sprt/tela_fase2.jpg)
+![TELA INICIAL](sprt/escolhapersonagens.png)
 
 # 🍕🎉 Vitoria
-![TELA INICIAL](/IP/fim_jogo.png)
+![TELA INICIAL](/sprt/fim_jogo.png)
 
 # 😞🍔 Derrota
-![TELA INICIAL](IP/tela_perdeu.png)
+![TELA INICIAL](sprt/tela_perdeu.png)
 
 # Membros da equipe:
 - Carlos Vinicius Felix da Silva ***cvfs***
