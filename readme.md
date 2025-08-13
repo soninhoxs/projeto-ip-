@@ -48,7 +48,7 @@ git clone https://github.com/carlosvinicius-ux/Projeto_Final_IP.git
 python jogo.py
 ```
 
-# Criaçao do hambiente virtual (recomendavel):
+# Criaçao do ambiente virtual (recomendavel):
 - No Windows:
 ```
 python -m venv venv
