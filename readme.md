@@ -118,3 +118,54 @@ deactivate
 - organização geral: Joao Henrique | Lucas David
 - slides e relatório: Joao Henrique | Lucas David
 
+
+# **Relatório de Desenvolvimento do Projeto**
+- **Conceitos de Programação Aplicados**
+
+Para a construção do jogo, nossa equipe aplicou uma variedade de conceitos fundamentais da programação para garantir um código funcional, organizado e de fácil manutenção.
+Programação Orientada a Objetos (POO): Foi o paradigma central do projeto. O jogo foi estruturado em Classes (Player, Item, Game), o que permitiu encapsular dados e comportamentos de forma lógica. Cada elemento do jogo se tornou um objeto independente, facilitando o gerenciamento do estado e a interação entre eles.
+
+## **Estruturas de Dados**
+
+**Listas:** Foram essenciais para gerenciar dinamicamente os múltiplos itens (hambúrgueres, bombas) que aparecem na tela. A cada ciclo do jogo, a lista era percorrida para atualizar e desenhar cada item.
+
+**Dicionários:** Foram utilizados para mapear dados de forma eficiente, como associar o nome de um tipo de item (ex: "burger") à sua respectiva imagem carregada, simplificando a lógica de renderização.
+
+**Modularização de Código:** O projeto foi dividido em módulos (arquivos .py separados), cada um com uma responsabilidade clara (player.py para o jogador, settings.py para constantes, etc.). Essa abordagem tornou o código mais limpo, legível e facilitou o trabalho em equipe, permitindo que diferentes membros focassem em partes distintas do sistema sem conflitos.
+
+**Lógica de Programação e Controle de Fluxo:** A base do funcionamento do jogo foi construída com comandos condicionais (if/elif/else) e laços de repetição (while, for). O game loop principal, um laço while, garantiu a execução contínua do jogo, enquanto os condicionais controlaram toda a lógica de movimentação, colisão, pontuação e transição entre os estados do jogo (menu, jogando, fim de jogo).
+
+**Manipulação de Arquivos e Sistema Operacional:** Foi utilizada a biblioteca os para garantir que o jogo pudesse carregar seus assets (imagens, fontes) de forma robusta. A função os.path.join() permitiu construir os caminhos dos arquivos de uma maneira que funciona em diferentes sistemas operacionais, tornando o projeto mais portável.
+
+## **Desafios, Erros e Lições Aprendidas**
+- Qual foi o maior erro cometido durante o projeto? Como vocês lidaram com ele?
+
+Erro: O maior erro da equipe foi iniciar o desenvolvimento sem antes garantir que todos os membros tivessem um ambiente de desenvolvimento padronizado e corretamente configurado. Isso resultou em problemas iniciais onde o código funcionava em uma máquina, mas não em outra, devido a diferenças na instalação do Python e das bibliotecas.
+
+Solução: Lidamos com o erro estabelecendo um guia de configuração claro e padronizado para o projeto (documentado no README.md). Adotamos o uso de ambientes virtuais e um arquivo de dependências (requirements.txt) para garantir que todos estivessem trabalhando com as mesmas versões das bibliotecas, eliminando inconsistências.
+
+- **Qual foi o maior desafio enfrentado durante o projeto? Como vocês lidaram com ele?**
+
+Desafio: O maior desafio técnico foi a gestão dos estados do jogo (menu principal, fase 1, fase 2, tela de game over) e as transições entre eles. Garantir que os eventos, a lógica de atualização e a renderização se comportassem corretamente em cada estado exigiu um planejamento cuidadoso da arquitetura do código.
+
+Solução: Implementamos uma máquina de estados simples, onde uma única variável (self.state) controlava o estado atual do jogo. Toda a lógica de update() e draw() era então direcionada por condicionais que verificavam essa variável, garantindo que apenas os elementos do estado ativo fossem processados.
+
+- **Quais as lições aprendidas durante o projeto?**
+
+A importância da organização e modularização: Um projeto bem estruturado desde o início economiza tempo e evita dores de cabeça no futuro.
+Versionamento é comunicação: Utilizar o Git com mensagens de commit claras foi essencial para que a equipe entendesse o progresso e as alterações feitas por cada membro.
+Planejamento > Código: Gastar tempo planejando a arquitetura do software (como os estados do jogo funcionariam) antes de escrever o código evitou grandes refatorações.
+Documentação é crucial: Um README.md bem escrito não é apenas para os outros, mas também para alinhar a própria equipe sobre como instalar, rodar e contribuir com o projeto.
+
+## **Ferramentas e Bibliotecas Utilizadas**
+- Ferramentas:
+
+Python 3: Linguagem de programação escolhida pela sua sintaxe limpa, vasta comunidade e ecossistema robusto para desenvolvimento de jogos.
+Visual Studio Code: Editor de código adotado pela equipe por sua flexibilidade, terminal integrado e excelente suporte à depuração e ao controle de versão com Git.
+Git & GitHub: Utilizados para o controle de versão distribuído, permitindo que a equipe trabalhasse de forma colaborativa e assíncrona, mantendo um histórico completo de todas as alterações no código.
+
+- Bibliotecas:
+
+Pygame: Framework principal do projeto, justificado por ser uma biblioteca consolidada e de fácil aprendizado para o desenvolvimento de jogos 2D em Python, provendo toda a base para gráficos, som e entrada de usuário.
+Random: Biblioteca padrão do Python, utilizada para introduzir elementos de aleatoriedade no jogo, como a posição inicial e a velocidade dos itens que caem.
+OS: Biblioteca padrão do Python, utilizada para garantir a portabilidade do projeto ao lidar com caminhos de arquivos, tornando o código agnóstico ao sistema operacional.
