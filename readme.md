@@ -142,7 +142,7 @@ Programação Orientada a Objetos (POO): Foi o paradigma central do projeto. O j
 
 Erro: O maior erro da equipe foi iniciar o desenvolvimento sem antes garantir que todos os membros tivessem um ambiente de desenvolvimento padronizado e corretamente configurado. Isso resultou em problemas iniciais onde o código funcionava em uma máquina, mas não em outra, devido a diferenças na instalação do Python e das bibliotecas.
 
-Solução: Lidamos com o erro estabelecendo um guia de configuração claro e padronizado para o projeto (documentado no README.md). Adotamos o uso de ambientes virtuais e um arquivo de dependências (requirements.txt) para garantir que todos estivessem trabalhando com as mesmas versões das bibliotecas, eliminando inconsistências.
+Solução: Lidamos com o erro estabelecendo um guia de configuração claro e padronizado para o projeto (documentado no README.md). Adotamos o uso de ambientes virtuais e um guia de instalação das dependências para garantir que todos estivessem trabalhando com as mesmas versões das bibliotecas, eliminando inconsistências.
 
 - **Qual foi o maior desafio enfrentado durante o projeto? Como vocês lidaram com ele?**
 
@@ -160,12 +160,14 @@ Documentação é crucial: Um README.md bem escrito não é apenas para os outro
 ## **Ferramentas e Bibliotecas Utilizadas**
 - Ferramentas:
 
-Python 3: Linguagem de programação escolhida pela sua sintaxe limpa, vasta comunidade e ecossistema robusto para desenvolvimento de jogos.
+Python 3: Vasta comunidade e ecossistema robusto para desenvolvimento de jogos.
 Visual Studio Code: Editor de código adotado pela equipe por sua flexibilidade, terminal integrado e excelente suporte à depuração e ao controle de versão com Git.
 Git & GitHub: Utilizados para o controle de versão distribuído, permitindo que a equipe trabalhasse de forma colaborativa e assíncrona, mantendo um histórico completo de todas as alterações no código.
 
 - Bibliotecas:
 
 Pygame: Framework principal do projeto, justificado por ser uma biblioteca consolidada e de fácil aprendizado para o desenvolvimento de jogos 2D em Python, provendo toda a base para gráficos, som e entrada de usuário.
+
 Random: Biblioteca padrão do Python, utilizada para introduzir elementos de aleatoriedade no jogo, como a posição inicial e a velocidade dos itens que caem.
+
 OS: Biblioteca padrão do Python, utilizada para garantir a portabilidade do projeto ao lidar com caminhos de arquivos, tornando o código agnóstico ao sistema operacional.
