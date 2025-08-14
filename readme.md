@@ -56,19 +56,17 @@ Siga os passos abaixo para rodar o projeto localmente.
 3.  **Crie e ative o Ambiente Virtual (Recomendado):**
     Isso cria um ambiente isolado para as dependências do projeto, evitando conflitos.
 
-    * **No Windows:**
+   - **No Windows:**
         ```bash
         python -m venv venv
         venv\Scripts\activate
         ```
 
-    * **No Mac/Linux:**
+   - **No Mac/Linux:**
         ```bash
         python -m venv venv
         source venv/bin/activate
         ```
-    *(Após ativar, você verá um `(venv)` no início da linha do seu terminal).*
-
 4.  **Instale as dependências:**
     Com o ambiente virtual ativado, instale o Pygame:
     ```bash
@@ -84,14 +82,10 @@ Siga os passos abaixo para rodar o projeto localmente.
 
 ### Desativando o Ambiente Virtual
 
-Quando terminar de jogar ou desenvolver, você pode desativar o ambiente virtual com o simples comando:
+Quando terminar de jogar, você pode desativar o ambiente virtual com o simples comando:
 ```bash
 deactivate
-
-
-
-
-
+```
 
 # 🎬 Tela Inicial 
 ![TELA INICIAL](/sprt/tela_inicial.png)
