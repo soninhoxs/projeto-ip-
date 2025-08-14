@@ -1,5 +1,5 @@
 # Projeto IP - equipe 1
-# Introduçao
+# Introdução
 
 - Este é um mini-jogo de plataforma desenvolvido em Pygame, inspirado na clássica animação "Tá Chovendo Hambúrguer". Nele, você pode escolher entre o inventor Flint Lockwood 👨‍🔬 e seu fiel companheiro, o Macaco Steve 🐒, para enfrentar uma chuva de comidas e perigos.
 O jogo é dividido em duas fases distintas, cada uma com seus próprios desafios e objetivos.
@@ -32,11 +32,11 @@ Após provar seu valor, você avança para a Fase 2, onde o desafio aumenta dras
 
 # Bibliotecas utilizadas:
 
-- pygame: Para criação da interface gráfica, controle de eventos e manipulação de imagens/sons.
+- Pygame: Para criação da interface gráfica, controle de eventos e manipulação de imagens/sons.
 
-- random: Para geração de valores aleatórios usados no comportamento do jogo, como a posição e a velocidade dos itens que caem.
+- Random: Para geração de valores aleatórios usados no comportamento do jogo, como a posição e a velocidade dos itens que caem.
 
-- os: Para manipulação de caminhos de arquivos do sistema operacional, garantindo que o jogo encontre as imagens e fontes independentemente de onde for executado (os.path.join).
+- Os: Para manipulação de caminhos de arquivos do sistema operacional, garantindo que o jogo encontre as imagens e fontes independentemente de onde for executado (os.path.join).
 
 
 # Instalação
@@ -45,7 +45,7 @@ Siga os passos abaixo para rodar o projeto localmente.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/soninhoxs/projeto-ip-.git](https://github.com/soninhoxs/projeto-ip-.git)
+    git clone https://github.com/soninhoxs/projeto-ip-.git
     ```
 
 2.  **Navegue até a pasta do projeto:**
@@ -90,15 +90,18 @@ deactivate
 # 🎬 Tela Inicial 
 ![TELA INICIAL](/sprt/tela_inicial.png)
 
-# 🌧️🍔 Instruçao 
+# 🌧️🍔 Instrução 
 ![TELA INICIAL](/sprt/instrucoes.png)
 
-# 🤖💥 Cenarios
+# 🍗🐟 Fases
+![TELA INICIAL](sprt/tela_fasesn.png)
+
+# 🤖💥 Cenários
 ![TELA INICIAL](sprt/tela_fase1.jpg)
 ![TELA INICIAL](sprt/tela_fase2.jpg)
 ![TELA INICIAL](sprt/escolhapersonagens.png)
 
-# 🍕🎉 Vitoria
+# 🍕🎉 Vitória
 ![TELA INICIAL](/sprt/fim_jogo.png)
 
 # 😞🍔 Derrota
@@ -112,11 +115,11 @@ deactivate
 - João Henrique dos Santos Silva ***jhss2***
 - Lucas David Lima Ferreira ***ldlf***
 
-# Divisao de tarefas do grupo
-- visual: Carlos | Joyce
-- código: Efraim | Joao Gustavo | Joao Henrique
-- organização geral: Joao Henrique | Lucas David
-- slides e relatório: Joao Henrique | Lucas David
+# Divisão de tarefas do grupo
+- Visual e roteiro: Carlos | Joyce
+- Código: Efraim | Joao Gustavo | Joao Henrique | Joyce
+- Organização geral: Joao Henrique | Lucas David
+- Slides e relatório: Joao Henrique | Lucas David
 
 
 # **Relatório de desenvolvimento do projeto**
