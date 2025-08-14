@@ -43,7 +43,7 @@ Após provar seu valor, você avança para a Fase 2, onde o desafio aumenta dras
 
 Siga os passos abaixo para rodar o projeto localmente.
 
-1.  **Clone o seu repositório:**
+1.  **Clone o repositório:**
     ```bash
     git clone [https://github.com/soninhoxs/projeto-ip-.git](https://github.com/soninhoxs/projeto-ip-.git)
     ```
@@ -53,17 +53,40 @@ Siga os passos abaixo para rodar o projeto localmente.
     cd projeto-ip-
     ```
 
-3.  **Instale a dependência principal (Pygame):**
+3.  **Crie e ative o Ambiente Virtual (Recomendado):**
+    Isso cria um ambiente isolado para as dependências do projeto, evitando conflitos.
+
+    * **No Windows:**
+        ```bash
+        python -m venv venv
+        venv\Scripts\activate
+        ```
+
+    * **No Mac/Linux:**
+        ```bash
+        python -m venv venv
+        source venv/bin/activate
+        ```
+    *(Após ativar, você verá um `(venv)` no início da linha do seu terminal).*
+
+4.  **Instale as dependências:**
+    Com o ambiente virtual ativado, instale o Pygame:
     ```bash
     pip install pygame
     ```
 
-4.  **Execute o jogo:**
+5.  **Execute o jogo:**
     O script principal está dentro da pasta `codigo_jogo`.
     ```bash
     cd codigo_jogo
     python main.py
     ```
+
+### Desativando o Ambiente Virtual
+
+Quando terminar de jogar ou desenvolver, você pode desativar o ambiente virtual com o simples comando:
+```bash
+deactivate
 
 
 
