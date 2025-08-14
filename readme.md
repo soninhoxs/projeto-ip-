@@ -31,34 +31,39 @@ Após provar seu valor, você avança para a Fase 2, onde o desafio aumenta dras
 - 🔚 Condições de vitória e derrota com tela de game over.
 
 # Bibliotecas utilizadas:
-- pygame: para criação da interface gráfica, controle de eventos e manipulação de imagens/sons.
-- random: para geração de valores aleatórios usados no comportamento do jogo.
 
-# Instalaçao
-1. Clone o repositorio:
-```
-git clone https://github.com/carlosvinicius-ux/Projeto_Final_IP.git
-```
-2. Instale as dependencias:
-```
-""pip install -r requirements.txt""
-```
-3. Execute:
-```
-python jogo-final.py
-```
+- pygame: Para criação da interface gráfica, controle de eventos e manipulação de imagens/sons.
 
-# Criaçao do ambiente virtual (recomendavel):
-- No Windows:
-```
-python -m venv venv
-venv\Scripts\activate
-```
-- No Mac/Linux:
-```
-python -m venv venv
-source venv/bin/activate
-```
+- random: Para geração de valores aleatórios usados no comportamento do jogo, como a posição e a velocidade dos itens que caem.
+
+- os: Para manipulação de caminhos de arquivos do sistema operacional, garantindo que o jogo encontre as imagens e fontes independentemente de onde for executado (os.path.join).
+
+
+# Instalação
+
+Siga os passos abaixo para rodar o projeto localmente.
+
+1.  **Clone o seu repositório:**
+    ```bash
+    git clone [https://github.com/soninhoxs/projeto-ip-.git](https://github.com/soninhoxs/projeto-ip-.git)
+    ```
+
+2.  **Navegue até a pasta do projeto:**
+    ```bash
+    cd projeto-ip-
+    ```
+
+3.  **Instale a dependência principal (Pygame):**
+    ```bash
+    pip install pygame
+    ```
+
+4.  **Execute o jogo:**
+    O script principal está dentro da pasta `codigo_jogo`.
+    ```bash
+    cd codigo_jogo
+    python main.py
+    ```
 
 
 
@@ -92,7 +97,7 @@ source venv/bin/activate
 
 # Divisao de tarefas do grupo
 - visual: Carlos | Joyce
-- código: Efraim | Joao Gustavo 
+- código: Efraim | Joao Gustavo | Joao Henrique
 - organização geral: Joao Henrique | Lucas David
 - slides e relatório: Joao Henrique | Lucas David
 
