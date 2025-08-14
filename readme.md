@@ -119,7 +119,7 @@ deactivate
 - slides e relatório: Joao Henrique | Lucas David
 
 
-# **Relatório de Desenvolvimento do Projeto**
+# **Relatório de desenvolvimento do projeto**
 - **Conceitos de Programação Aplicados**
 
 Para a construção do jogo, nossa equipe aplicou uma variedade de conceitos fundamentais da programação para garantir um código funcional, organizado e de fácil manutenção.
